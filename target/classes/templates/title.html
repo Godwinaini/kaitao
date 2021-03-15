@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="../static/js/urls.js"></script>
+		<script src="../static/js/jquery.js"></script>
+		<script>
+			var searchURL = window.location.search;
+			searchURL = searchURL.substring(1, searchURL.length);
+			var targetPageId = searchURL.split("&")[0].split("=")[1];
+//			 alert(targetPageId);
+		</script>
+		<script>
+										
+			$.ajax({
+				url: ctx + '/kaitao/findById?id='+targetPageId,
+				success: function (data) {
+					// alert(1)
+					// console.log(data);
+					var html = ""; 							
+					html += ""+data.title+"";
+					$('#tt2').html(html);
+				}
+			});
+		
+		</script>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title id="tt2"></title>
+		<meta name="keywords" content="淘宝装修,淘宝店铺装修,淘宝装修费用" />
+		<meta name="description" content="在淘宝平台上开网店需要装修店铺，而且装修店铺并不是一成不变的，在报名参加大促活动的时候，还需要装修设计大促承接页，对于一些小卖家来说非常关心淘宝装修店铺需要多少钱的问题，今天跟大家介绍一下。" />
+		<meta http-equiv="Cache-Control" content="no-transform " />
+		<meta name="mobile-agent" content="format=html5;url=https://m.kaitao.cn/article/20201217145646.htm">
+		<meta name="applicable-device" content="pc,mobile">
+		<link rel="alternate" media="only screen and(max-width: 640px)" href="https://m.kaitao.cn/article/20201217145646.htm">
+		<link rel="shortcut icon" href="https://www.kaitao.cn/favicon.ico" />
+		<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../static/css/all.css">
+		<!--<link rel="stylesheet" href="static/css/amazeui.css">-->
+		<link rel="stylesheet" href="../static/css/article.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/ds-un-detail.css" />
+		
+
+
+		
+		<style> .lunbo-item {
+            width: 1000%
+        }
+    </style>
+		<style>
+			.index-header {
+            position: relative !important;
+        }
+
+        @media (min-width: 1200px) {
+            .subnav {
+                margin-top: 0px !important;
+            }
+
+            .wrap-main {
+                margin: 10px auto 0 !important
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .wrap-main {
+                margin: 40px auto 0 !important
+            }
+        }
+
+        .top-slide {
+            width: 100%;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        /*广告区*/
+        .top-right {
+            padding: 0 10px 0 10px;
+            box-sizing: border-box;
+            background: #FFFFFF;
+            width: 335px;
+            height: 449px;
+            margin-bottom: 20px
+        }
+
+        .hotqa h2 {
+            padding: 0 10px;
+        }
+
+        .hotqa span {
+            display: block;
+            float: left;
+            width: 70px;
+            height: 0;
+            border-bottom: 1px solid #999999;
+            margin-top: 30px;
+        }
+
+        .hotqa p {
+            float: left;
+            width: 170px;
+            font-size: 18px;
+            line-height: 60px;
+            color: #334259;
+            text-align: center;
+        }
+
+        .top-list {
+            width: 315px;
+            height: 380px;
+            background: #f9fafe;
+            padding: 10px 10px 10px 20px;
+            box-sizing: border-box;
+        }
+
+        .top-list li {
+            height: 37.5px;
+            max-width: 280px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .top-list a {
+
+            color: #666666;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        /*广告区主要部分*/
+        /*广告小框news公共*/
+
+        .news {
+            width: 335px;
+
+            margin-bottom: 20px;
+            background: white;
+            padding: 0 10px 10px 10px;
+            box-sizing: border-box;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-tit {
+            font-size: 16px;
+            color: #333333;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        /*阅读列表*/
+        .news-list {
+            background: #f9fafe;
+            width: 100%;
+            border-radius: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .news-list img {
+            height: 20px;
+            width: 30px;
+        }
+
+        .news-list a {
+            color: #666666;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        .news-list img {
+            vertical-align: middle;
+            margin-right: 5px;
+            border-radius: 0;
+        }
+
+        .news-list li {
+
+            padding: 10px 0 10px 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        /*广告图片*/
+        .ad {
+            margin-bottom: 20px;
+        }
+
+        .ad li {
+            height: 125px;
+            margin-bottom: 10px;
+            background-size: 100% 100%;
+        }
+
+        .ad img {
+            width: 335px;
+            height: 125px;
+        }
+
+        .ad a:last-child li {
+            margin-bottom: 0;
+        }
+
+        .fixed{
+            position: fixed;
+            top: 20px;
+            left: calc(50% + 265px);
+        }
+        #rd-ad{
+            width: 335px;
+        }
+
+    </style>
+		<script src="../static/js/jquery-1.11.0.min.js"></script>
+		<script src="../static/js/ds-kaitao.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script src="static/js/un-detail.js" type="text/javascript" charset="utf-8"></script> -->
+		<script>
+			$(function () {
+            var adW = $(".ds-ad-middle").width()
+            $(".ds-ad-middle").css("height", adW * 105 / 850)
+			$("#detail-ad3").css("height", "auto")
+			
+            var adTW = $(".ds-ad-top").width()
+            $(".ds-ad-top").css("height", adTW * 105 / 800)
+            var admTW = $(".top-slide").width()
+            $("	.top-slide").css("height", admTW * 133 / 850)
+            $(window).resize(function () {
+                adW = $(".ds-ad-middle").width()
+                $(".ds-ad-middle").css("height", adW * 105 / 850)
+				$("#detail-ad3").css("height", "auto")
+				
+                adTW = $(".ds-ad-top").width()
+                $(".ds-ad-top").css("height", adTW * 105 / 800)
+
+                admTW = $(".top-slide").width()
+                $("	.top-slide").css("height", admTW * 133 / 850)
+            })
+        })
+    </script>
+		<script src="../static/js/jquery.dotdotdot.min.js"></script>
+		<script src="../static/js/public.js"></script>
+	</head>
+	<body class="bg-body-fff article-body">
+		<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../static/css/all.css">
+		<div class="index-header" id="index-header">
+			<div class="container">
+				<div class="row index-header-flex">
+					<div class="a-logo-tag"> <a href="/"><img class="pc-logo" src="../static/picture/pc-logo@2x.png" alt="pc-logo"></a>
+						<a href="/"><img class="phone-logo" src="../static/picture/phone-logo@2x.png" alt="phone-logo"></a> </div> <span> <i>问答</i>
+						<img src="../static/picture/hide_menu@2x20.png" alt="隐藏菜单"> </span>
+					<div class="header-ad"> <a href="http://a.kaitao.cn/a.php?id=284" target="_blank"><img src="../static/picture/5fd1ca6509415.png"
+							 style="margin-left: -55px"></a>
+						<!-- <a href='https://www.kaitao.cn/index/mynews.htm' target="_blank"><img src="static/picture/ad.png" style="margin-left: -55px"></a> -->
+					</div>
+					<div class="wrap-tag">
+						<div class="header-other"> <img class="img-search" src="../static/picture/search@2x20.png" alt="搜索">
+							<ul class="personnal-info-ul personnal-info-pc">
+								<li><a href="https://wen.kaitao.cn/user/message.html">个人主页</a></li>
+								<li><a href="javascript:void(0)">退出账号</a></li>
+							</ul>
+						</div> <span class="pc-tiwen"><a href="https://wen.kaitao.cn?tiwen=1" rel="nofollow" class="header-tiwen">提问</a></span>
+						<div class="nav-header">
+							<ul class="nav-header-ul">
+								<li class="active"> <a href="/taobao">淘宝大学</a> </li>
+								<li> <a href="login.html">登录</a> </li>
+							</ul>
+						</div>
+					</div>
+					<div class="wrap-search"> <input type="text" name="q" placeholder="搜索.." id="search-input"><i>取消</i> <img src="static/picture/green_search@2x20.png"
+						 id="search-submit" alt="搜索"> </div>
+				</div>
+			</div> <!-- 首页二级导航 9.25 -->
+		</div>
+		<div class="subnav article-subnav">
+			<div class="container">
+				<ul class="subnav-list">
+					<li class="subnav-item"><a href="/">首页</a></li>
+					<li class="subnav-item"> <a href="https://www.kaitao.cn/kaidianzhidao">淘宝开店</a> <span></span>
+						<ul class="subnav-item-slide">
+							<li><a href="https://www.kaitao.cn/guize">淘宝规则</a></li>
+							<li><a href="https://www.kaitao.cn/taobaokaoshi">淘宝考试</a></li>
+							<li><a href="https://www.kaitao.cn/mingdian">淘宝名店</a></li>
+							<li><a href="https://www.kaitao.cn/zhuangxiujingyan">淘宝装修</a></li>
+							<li><a href="https://www.kaitao.cn/taobaoyunying">运营策划</a></li>
+						</ul>
+					</li>
+					<li class="subnav-item"> <a href="https://www.kaitao.cn/taobaotuiguang">淘宝推广</a> <span></span>
+						<ul class="subnav-item-slide">
+							<li><a href="https://www.kaitao.cn/wangdianseo">网店seo</a></li>
+							<li><a href="https://www.kaitao.cn/taoketuiguang">淘宝客</a></li>
+							<li><a href="https://www.kaitao.cn/zhitongche">淘宝直通车</a></li>
+							<li><a href="https://www.kaitao.cn/taobaohuodong">淘宝活动</a></li>
+						</ul>
+					</li>
+					<li class="subnav-item"> <a href="https://www.kaitao.cn/taobaojingyan">淘宝经验</a> <span></span>
+						<ul class="subnav-item-slide">
+							<li><a href="https://www.kaitao.cn/taobaotuandui">团队管理</a></li>
+							<li><a href="https://www.kaitao.cn/shoutao">手机淘宝</a></li>
+							<li><a href="https://www.kaitao.cn/tmall">天猫商城</a></li>
+							<li><a href="https://www.kaitao.cn/shuadan">淘宝刷单</a></li>
+							<li><a href="https://www.kaitao.cn/taobaozatan">淘宝杂谈</a></li>
+						</ul>
+					</li>
+					<li class="subnav-item"> <a href="#">特色市场</a> <span></span>
+						<ul class="subnav-item-slide">
+							<li><a href="https://www.kaitao.cn/nongcuntaobao">农村淘宝</a></li>
+							<li><a href="https://www.kaitao.cn/aliexpress">速卖通</a></li>
+							<li><a href="https://www.kaitao.cn/jd">京东商城</a></li>
+							<li><a href="https://www.kaitao.cn/weixin">微信教程</a></li>
+							<li><a href="https://www.kaitao.cn/pinduoduo">拼多多</a></li>
+						</ul>
+					</li>
+					<!-- <li class="subnav-item"> <a href="http://a.kaitao.cn/a.php?id=78" target="_blank" style="color:red">模板素材</a> <a rel="nofollow" onclick="_hmt.push(['_trackEvent', 'kaitao', 'click', 'nav', '1807'])" href="https://www.taodianjia.com/?hmsr=kaitao&hmpl=nav&hmcu=1807&utm_source=kaitao" target="_blank" style="color:red">天猫转让</a> <img src="static/picture/hot.gif" width="20"  style="margin-bottom: 20px;margin-left: -5px"> </li> <li class="subnav-item"> <a href="https://www.kaitao.cn/video" target="_blank" style="color:red">淘宝课程</a> <img src="static/picture/mianfei.png" width="20"  style="margin-bottom: 20px;margin-left: -5px"> </li>
+-->
+					<li class="subnav-item"> <a href="#">直播电商</a> <span></span>
+						<ul class="subnav-item-slide">
+							<li><a href="https://www.kaitao.cn/douyin">抖音</a></li>
+							<li><a href="https://www.kaitao.cn/kuaishou">快手</a></li>
+							<li><a href="https://www.kaitao.cn/wxzhibo">微信直播</a></li>
+							<li><a href="https://www.kaitao.cn/tbzhibo">淘宝直播</a></li>
+						</ul>
+					</li>
+					<li class="subnav-item"> <a href="#">免费课程</a> <span></span>
+						<ul class="subnav-item-slide">
+							<li><a href="https://www.kaitao.cn/course/1.htm">淘宝课程</a></li>
+						</ul>
+					</li>
+					<li class="subnav-item"> <a href="https://www.kaitao.cn/tool">实战工具</a> </li>
+					<!--
+          <li class="subnav-item"> <a href="https://www.kaitao.cn/index/mynews.htm" target="_blank" style="color:red">招商合作</a> </li>
+-->
+				</ul>
+				<div class="subnav-ad"> </div>
+			</div>
+		</div> <!-- 百度统计-->
+		<script>
+			var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0dbb2af70917952aba0ffea5e0291883";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+		<script src="../static/js/jquery-1.11.0.min.js"></script>
+		<script src="../static/js/bootstrap.min.js"></script>
+		<script src="../static/js/jquery.dotdotdot.min.js"></script>
+		<script src="../static/js/public.js" charset="utf-8"></script>
+		<script>
+			var isLogin = false;
+  var askurl = 'https://wen.kaitao.cn';
+  $('#search-input').keydown(function(e){
+      if(e.keyCode==13){
+         var val = $('#search-input').val();
+        var url = 'http://s.kaitao.cn/cse/search?s=15491038084637784056&q='+val;
+        window.open(url);
+      }
+  })
+	$('#search-submit').click(function(){
+      var val = $('#search-input').val();
+      var url = 'http://s.kaitao.cn/cse/search?s=15491038084637784056&q='+val;
+      window.open(url);
+   })
+    function showText(){
+      var a = $(".taobao-article-ul>li>a>div>h5"),
+         text = a.html();
+      if( a.is(a) ){
+         if( text.length>28 ){
+            a.html( text.substring(0,28)+"...");
+         }
+      }
+   }
+   $(function(){
+      showText();
+      $('.subnav-item').on('mouseover', function () {
+        $(this).find('.subnav-item-slide').finish().show();
+      }).on('mouseout', function () {
+        $(this).find('.subnav-item-slide').finish().hide();
+      });
+   })
+   $('.header-tiwen').click(function(){
+      window.open(askurl+'?tiwen=1');
+   })
+     //手机端nav下拉列表显示与隐藏
+  $(".index-header-flex>span").click(function(){
+  var mobliePhone_nav_ist = $(".mobliePhone-nav"),
+    display = mobliePhone_nav_ist.css("display"),
+    body = $(document.body);
+  if("none" == display){
+    body.addClass("body-fixed");
+    mobliePhone_nav_ist.show();
+  }else{
+    body.removeClass("body-fixed");
+    mobliePhone_nav_ist.hide();
+  }
+  })
+	</script>
+		<!-- 360收录 -->
+		<script>(function(){
+  var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?e411ee388111103b05965e8488d13eee":"https://jspassport.ssl.qhimg.com/11.0.1.js?e411ee388111103b05965e8488d13eee";
+  document.write('<script src="' + src + '" id="sozz"><\/script>');
+  })();
+  </script>
+		<div class="wrap-main">
+			<div class="wrap-left">
+				<div class="articleClassify-title-wrap" style="margin-top: -30px;margin-bottom: 30px" id="subnav-title">
+					<div class="articleClassify-title"> <span id="ss1"><a href="/zhuangxiujingyan.htm"></a></span> </div>
+				</div>
+
+				<script>
+										
+					$.ajax({
+						url: ctx + '/kaitao/findById?id=' + targetPageId,
+						success: function (data) {
+
+							var html = ""; 
+							
+							html += "<span id='ss1'><a href='/zhuangxiujingyan.htm'>" + data.type + "</a></span>";
+							$('#ss1').append(html);
+						}
+					});
+				
+			</script>
+				<!---->
+				<!---->
+				<div class="article-detail">
+					<h5 id="tt1"></h5>
+					
+					
+					<script>
+										
+							$.ajax({
+								url: ctx + '/kaitao/findById?id=' + targetPageId,
+								success: function (data) {
+	
+									var html = ""; 
+									html += "<h5 id='tt1'>" + data.title + "</h5>";
+									$('#tt1').append(html);
+								}
+							});
+						
+					</script>
+
+					<p id="ad-tit" style='border: 1px solid #ff9900;padding: 12px;border-radius: 5px;margin-top: 20px;color: #ff9900;'>
+						<span>全国真实IP多渠道进店-暴力提升收藏加购-生意参谋可查</span> <a href="http://a.kaitao.cn/a.php?id=306" target="_blank" style='float:right;color:#ff9900;border-bottom:1px solid #ff9900;'
+						 rel="nofollow">了解详情</a> </p>
+					<div class="article-detail-subtitle"> <time>2020-12-17 14:56:55</time> <span>8787人阅读</span> </div>
+					<ul class="article-label-ul" style="position: relative;top:-40px;justify-content: flex-end;">
+						<li> <a href="https://www.kaitao.cn/labels/20201217145646-1.htm" title="淘宝装修"> 淘宝装修 </a> </li>
+						<li> <a href="https://www.kaitao.cn/labels/20201217145646-2.htm" title="淘宝店铺装修"> 淘宝店铺装修 </a> </li>
+						<li> <a href="https://www.kaitao.cn/labels/20201217145646-3.htm" title="淘宝装修费用"> 淘宝装修费用 </a> </li>
+					</ul>
+					<!--顶部广告-->
+					<ul class="ds-ad-top" id="detail-ad2" style="display:none"> </ul>
+					<ul>
+						<li style="margin-bottom: 8px"> <a href="http://a.kaitao.cn/a.php?id=307" target="_blank" style='width: 100%; height: 60px; display: block; background: url("static/images/o_1en27n4iuood138t16r6km6hvo9.jpg") no-repeat; background-size: 100% 100%'>&nbsp;</a>
+						</li>
+						<li style="margin-bottom: 8px"> <a href="http://a.kaitao.cn/a.php?id=306" target="_blank" style='width: 100%; height: 60px; display: block; background: url("static/images/o_1epl91hhoj7m1mtd79f1rcg1hjq9.png") no-repeat; background-size: 100% 100%'>&nbsp;</a>
+						</li>
+						<li style="margin-bottom: 8px">
+							<script src="../static/js/lei017.js"></script>
+						</li>
+					</ul> <!--  -->
+					<!--         <div style="margin-top: -50px"></div> -->
+					<div class="article-content" id="kaitao_content">
+						<!--<p style="text-align: center;"><img src="static/picture/5fdb011f33cc3.png" title="淘宝装修" alt="淘宝装修" width="300"-->
+							 <!--height="200" border="0" vspace="0" style="width: 300px; height: 200px;" /></p>-->
+						<p id="pp1"></p>
+						
+						<p>　　推荐阅读：</p>
+						<p>　　<a href="https://www.kaitao.cn/article/20201213120211.htm" target="_blank">请人做淘宝装修多少钱?请人装修注意什么?</a></p>
+						<p>　　<a href="https://www.kaitao.cn/article/20201205163800.htm" target="_blank">淘宝装修店铺必看!看了不会亏</a></p>
+						<p>　　<a href="https://www.kaitao.cn/article/20201020133210.htm" target="_blank">淘宝装修怎么全屏?装修有什么注意事项?</a></p>
+						<p><br /></p> <a class="morebn" href="https://www.baidu.com/s?wd=淘宝装修&si=kaitao.cn&ct=2097152&cl=3" target="_blank"
+						 rel="nofollow"> 查看更多相似文章 </a>
+					</div>
+				</div>
+				<script>
+										
+					$.ajax({
+						url: ctx + '/kaitao/findById?id=' + targetPageId,
+						success: function (data) {
+
+							var html = ""; 							
+							html += "<p id='pp1'>" + data.content + "</p>"
+							$('#pp1').append(html);
+						}
+					});
+				
+			</script>
+				
+				
+				<ul class="ds-ad-middle" id="detail-ad3" style="height: auto;">
+					<li> <a href="http://a.kaitao.cn/a.php?id=309" target="_blank" rel="nofollow"> <img src="../static/picture/o_1em39ea4b1a2725h15u51kr01idi9.jpg"
+							 rel="nofollow" alt="文章页底部焦点图TX03"></a> </li>
+					<!--20201124 css ADD -->
+					<li style="margin-top:12px"> <a href="http://a.kaitao.cn/a.php?id=367" target="_blank" rel="nofollow"> <img src="../static/picture/1124.png"
+							 rel="nofollow" alt="" /></a> </li>
+				</ul>
+				<!--评论 begin-->
+				<div class="com am-hide-sm-only" style="margin-bottom: 20px;"> <span class="com_title">发表评论</span>
+					<div class="com_text">
+						<form class="form-horizontal comment-form" id="conmentform"> <img src="../static/picture/up.jpg">
+							<!--
+        <span class="com_text_1"> 以<a href="#">xxx</a>身份登录。<a href="###">登出</a> </span>
+        -->
+							<textarea required placeholder="有话不说，憋着难受" name="content" id="content" cols="45" rows="8" aria-required="true"
+							 autocomplete="off"></textarea>
+							<div class="hf"> <span style="display:block; float:left;margin:0 10px 0 0">昵称</span> <input name="nickname" id="nickname"
+								 type="text" value="匿名" size="20" maxlength="20" style="border: 1px solid #eee;font-size: 14px;
+    background: #FCFCFC;  width:100px; float:left"
+								 autocomplete="off" /> </div>
+							<!--
+        <div class="hf" style="display:no"> <span style="display:block; float:left">验证码</span> <input name="yzm_qt" id="yzm_qt" type="text"   size="4" maxlength="4" style="border: 1px solid #eee;font-size: 14px;
+    background: #FCFCFC;  width:100px; float:left" autocomplete="off"/> <img src="#" onClick="this.src='#?b='+Math.random()" style="cursor:hand;float:left" alt="点击刷新" /> </div>
+        -->
+							<input type="hidden" name="comment_url" value="/comment/comment/post.htm" id="comment_url"> <input name="submit"
+							 type="button" id="submitComment" class="com_btn js-ajax-submit" value="发表评论" /> <input type="hidden" name="post_title"
+							 id="post_title" value="淘宝装修店铺需要多少钱？有哪些技巧？" /> <input type="hidden" name="post_table" id="post_table" value="ebeaiGeUDw9XSNBNt5PRfVezwMTKVGNFxnMIPqxPod3CxA" />
+							<input type="hidden" name="post_id" id="post_id" value="20201217145646" /> <input type="hidden" name="article_id"
+							 value="20201217145646" id="article_id"> <input type="hidden" name="to_uid" id="to_uid" value="0" /> <input type="hidden"
+							 name="parentid" id="parentid" value="0" /> </form>
+					</div>
+				</div>
+				<!--评论 end-->
+				<ul class="ds-ad-middle" id="detail-ad4">
+					<li> <a href="http://a.kaitao.cn/a.php?id=310" target="_blank" rel="nofollow"> <img src="../static/picture/o_1egnle29k1gf8ehj1frg1nj1a0n9.png"
+							 rel="nofollow" alt="文章页评论页焦点图TX04" /></a> </li>
+				</ul>
+				<div class="interest-article">
+					<h4>&nbsp;您可能感兴趣的文章</h4>
+					<ul class="interest-article-list clearfix" id="detail-ad5">
+						<li> <a href="http://www.kaitao.cn/article/index/id/20180927185228.htm" target="_blank"> <img src="../static/picture/o_1e97daqt41mdiss4121418ntt1s9.png"
+								 rel="nofollow" alt="为什么刷单会被淘宝查？如何安全刷单？" /> </a>
+							<p> <a href="http://www.kaitao.cn/article/index/id/20180927185228.htm" target="_blank">为什么刷单会被淘宝查？如何安全刷单？</a>
+							</p>
+						</li>
+						<li> <a href="https://www.kaitao.cn/article/20190222185012.htm" target="_blank"> <img src="../static/picture/o_1dab0s7re1nu1phe1kinmtngt9.png"
+								 rel="nofollow" alt="淘宝新店运营，从日销10单到1000单实操干货分享！" /> </a>
+							<p> <a href="https://www.kaitao.cn/article/20190222185012.htm" target="_blank">淘宝新店运营，从日销10单到1000单实操干货分享！</a>
+							</p>
+						</li>
+						<li> <a href="https://www.kaitao.cn/article/20170328175450.htm" target="_blank"> <img src="../static/picture/o_1dbc6vdh01075u9jbgm8ra1a6a9.jpg"
+								 rel="nofollow" alt="2020最全的淘宝刷流量方法" /> </a>
+							<p> <a href="https://www.kaitao.cn/article/20170328175450.htm" target="_blank">2020最全的淘宝刷流量方法</a> </p>
+						</li>
+						<li> <a href="https://www.kaitao.cn/article/20190402121316.htm" target="_blank"> <img src="../static/picture/o_1dab0u40e55g1qph1bf5t3mvd29.png"
+								 rel="nofollow" alt="2020年最新淘宝联盟淘宝客升高佣规则技巧解读" /> </a>
+							<p> <a href="https://www.kaitao.cn/article/20190402121316.htm" target="_blank">2020年最新淘宝联盟淘宝客升高佣规则技巧解读</a> </p>
+						</li>
+						<li> <a href="https://www.kaitao.cn/article/20200420105741.htm" target="_blank"> <img src="../static/picture/o_1eek3kohqosn1oae1c5e4nuajg9.png"
+								 rel="nofollow" alt="众测网-全网首家体验式电商营销服务平台" /> </a>
+							<p> <a href="https://www.kaitao.cn/article/20200420105741.htm" target="_blank">众测网-全网首家体验式电商营销服务平台</a> </p>
+						</li>
+						<li> <a href="https://www.kaitao.cn/article/20191231172247.htm" target="_blank"> <img src="../static/picture/o_1dtfelkvc129o5lf1m4u1bhuq4h9.jpg"
+								 rel="nofollow" alt="2020年淘宝天猫全年活动时间安排表" /> </a>
+							<p> <a href="https://www.kaitao.cn/article/20191231172247.htm" target="_blank">2020年淘宝天猫全年活动时间安排表</a> </p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="wrap-right">
+				<div class="lunbo lunbo-w335">
+					<div class="lunbo-item" style="margin-left: 0px;"> <a href="http://a.kaitao.cn/a.php?id=311" class="carousel"
+						 target="_blank" rel="nofollow"> <img src="../static/picture/o_1epfdqulbcfn1tdq13ab8eonrd9.png" rel="nofollow" alt="文章右侧顶部焦点图TX11" />
+						</a> </div>
+				</div>
+				<div class="news">
+					<h2 class="news-tit"><i class="iconfont icon-yuedu1"></i> 推荐阅读</h2>
+					<ul class="news-list" id="rd-read">
+						<li> <a href="https://www.kaitao.cn/article/20190617132045.htm" target="_blank"> <img src="../static/picture/o_1dab1m0pd1p6m1lp5em5sf9bho9.jpg"
+								 rel="nofollow" alt="淘宝免费试用中心在哪？如何申请加入？" />淘宝免费试用中心在哪？如何申请加入？</a> </li>
+						<li> <a href="https://www.kaitao.cn/article/20190126170534.htm" target="_blank"> <img src="../static/picture/o_1dab1mutq4cl1c1c7a4vvk1qe9.png"
+								 rel="nofollow" alt="2020年淘宝做什么最赚钱?你最看好哪一行?" />2020年淘宝做什么最赚钱?你最看好哪一行?</a> </li>
+						<li> <a href="https://www.kaitao.cn/article/20190118140635.htm" target="_blank"> <img src="../static/picture/o_1dab1nsot1q3i13b41k99nog1ik69.png"
+								 rel="nofollow" alt="淘宝淘外推广怎么使用?详细步骤分享" />淘宝淘外推广怎么使用?详细步骤分享</a> </li>
+						<li> <a href="https://www.kaitao.cn/article/20181207164027.htm" target="_blank"> <img src="../static/picture/o_1dab1oo981ckf16e310bd145a3le9.png"
+								 rel="nofollow" alt="淘宝宝贝排名不稳定怎么办?如何优化?" />淘宝宝贝排名不稳定怎么办?如何优化?</a> </li>
+						<li> <a href="https://www.kaitao.cn/article/20180927185228.htm" target="_blank"> <img src="../static/picture/o_1dab1piq7k1819ht1knu17uclq09.png"
+								 rel="nofollow" alt="为什么刷单会被淘宝查？如何安全刷单？" />为什么刷单会被淘宝查？如何安全刷单？</a> </li>
+					</ul>
+				</div>
+				<ul class="ad" id="rd-ad-4">
+					<li> <a href="http://a.kaitao.cn/a.php?id=312" target="_blank" rel="nofollow"> <img src="../static/picture/o_1em39d8d515t21kog1ahpbbvobs9.jpg"
+							 rel="nofollow" alt="文章右侧焦点图TX20" /> </a> </li>
+					<li> <a href="http://a.kaitao.cn/a.php?id=313" target="_blank" rel="nofollow"> <img src="../static/picture/o_1epn4j00c1m6u177j18cu15mc7999.png"
+							 rel="nofollow" alt="文章右侧焦点图TX21" /> </a> </li>
+					<li> <a href="http://a.kaitao.cn/a.php?id=314" target="_blank" rel="nofollow"> <img src="../static/picture/o_1em8u520htec15dh17sc8d01f7s9.jpg"
+							 rel="nofollow" alt="文章右侧焦点图TX23" /> </a> </li>
+					<li> <a href="http://a.kaitao.cn/a.php?id=315" target="_blank" rel="nofollow"> <img src="../static/picture/o_1ehu9e23cjatr341epj18fjurp9.jpg"
+							 rel="nofollow" alt="文章右侧焦点图TX23" /> </a> </li>
+				</ul>
+				<div class="top-right">
+					<h2 class="hotqa clearfix"> <span class="xian"></span>
+						<p><i class="iconfont ic"></i>热门文章</p> <span></span>
+					</h2>
+					<ul class="top-list" id="article-ad">
+						<li> <a href="http://www.kaitao.cn/article/20180927185228.htm" target="_blank">1.&nbsp;为什么刷单会被淘宝查?如何安全刷单?</a>
+						</li>
+						<li> <a href="https://www.kaitao.cn/article/20190118140635.htm" target="_blank">2.&nbsp;淘宝淘外推广怎么使用？详细步骤分享</a>
+						</li>
+						<li> <a href="https://www.kaitao.cn/article/20190617132045.htm" target="_blank">3.&nbsp;淘宝免费试用中心在哪？如何申请加入？</a>
+						</li>
+						<li> <a href="https://www.kaitao.cn/article/20160918102633.htm" target="_blank">4.&nbsp;淘宝免费试用中心入口在哪儿?</a> </li>
+						<li> <a href="https://www.kaitao.cn/article/20200526163435.htm" target="_blank">5.&nbsp;抖音怎么涨粉快？新手也能日涨1000粉!</a>
+						</li>
+						<li> <a href="https://www.kaitao.cn/article/20170328175450.htm" target="_blank">6.&nbsp;2020最全的淘宝刷流量方法</a> </li>
+						<li> <a href="https://www.kaitao.cn/article/20190222185012.htm" target="_blank">7.&nbsp;淘宝新店运营，从日销10单到1000单实操干货分享！</a>
+						</li>
+						<li> <a href="https://www.kaitao.cn/article/20200506203227.htm" target="_blank">8.&nbsp;八年老店主玩淘宝试用的一些心得</a> </li>
+						<li> <a href="https://www.kaitao.cn/article/20200420105148.htm" target="_blank">9.&nbsp;众测网佣金是真的假的？佣金能提现吗？</a>
+						</li>
+						<li> <a href="https://www.kaitao.cn/article/20200420105741.htm" target="_blank">10.&nbsp;全网首家体验式电商营销服务平台</a> </li>
+					</ul>
+				</div>
+				<div class="rd-ad-wrap">
+					<ul class=" ad" id="rd-ad">
+						<li> <a href="http://a.kaitao.cn/a.php?id=316" target="_blank" rel="nofollow"> <img src="../static/picture/o_1emoq2c5qfqgcu37rht1l3ef9.jpeg"
+								 alt="文章右侧焦点图TX24" rel="nofollow" /> </a> </li>
+						<li> <a href="http://a.kaitao.cn/a.php?id=317" target="_blank" rel="nofollow"> <img src="../static/picture/o_1ee1uqq5j1pt8o0a1k1416au1ki19.png"
+								 alt="文章右侧焦点图TX25" rel="nofollow" /> </a> </li>
+						<li> <a href="http://a.kaitao.cn/a.php?id=318" target="_blank" rel="nofollow"> <img src="../static/picture/o_1eoefqhd5118q1hv3ea915ja1ffh9.png"
+								 alt="文章右侧焦点图TX26" rel="nofollow" /> </a> </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer" style='margin-top:70px'>
+			<div class="footer-about">
+				<div class="about-main clearfix">
+					<div class="about-contant mr">
+						<h4>关于</h4>
+						<p class="about-con introduce">
+							开淘网（www.kaitao.cn)建立于2010年。致力于推动电商行业信息，运营干货传播，通过交流分享、大咖互动等方式解决电商从业者面临的难题。是国内最具影响力的电商资讯平台之一。 </p>
+					</div>
+					<div class="about-link mr">
+						<h4>链接</h4>
+						<p class="about-con"><a href="https://www.kaitao.cn/aboutus.html" target="_blank">关于我们</a></p>
+						<p class="about-con"><a href="https://www.kaitao.cn/contact.html" target="_blank">联系我们</a></p>
+						<p class="about-con"><a href="https://www.kaitao.cn/index/mynews.htm" target="_blank">商务合作</a></p>
+						<p class="about-con"><a href="https://www.kaitao.cn/job.html" target="_blank">诚聘英才</a></p>
+						<p class="about-con"><a href="" target="_blank"></a></p>
+					</div>
+					<div class="about-partner mr">
+						<h4>合作伙伴</h4> <a href="javacript:void(0);"> <img src="../static/picture/o_1da8cmgucai3164e6sv1pq9nbb1v.png"> </a><a
+						 href="javacript:void(0);"> <img src="../static/picture/o_1da8cnaqo16tprfagog1ivt9e532.png"> </a><a href="javacript:void(0);">
+							<img src="../static/picture/o_1da8cmou03dp123f74r1g4n15mv29.png"> </a><a href="javacript:void(0);"> <img src="../static/picture/o_1da8cmsmomqt15iprg4td41eio2e.png">
+						</a><a href="javacript:void(0);"> <img src="../static/picture/o_1da8cmvneg00fap1fn1cd713ve2j.png"> </a><a href="javacript:void(0);">
+							<img src="../static/picture/o_1da8cnnub1pfstak119m1n1ujgl37.png"> </a>
+					</div>
+					<div class="about-code mr">
+						<h4>商务合作</h4>
+						<div class="attention"> <img src="../static/picture/o_1eoegfagslif17pk1s3es1li3u1v.jpg"> </div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copy">
+				<div class="footer-main ">
+					<p style="
+    text-align:  center;
+"><a target="_blank" href="http://bzrz.zhongqixin360.com/index.php/index/show/index?id=5202"
+						 style="
+    margin-right: 10px;
+"><img width="112px" height="34px" src="../static/picture/zqx.png"></a> <a target="cyxyv"
+						 href="https://v.yunaq.com/certificate?domain=www.kaitao.cn&amp;from=label&amp;code=90030"> <img src="../static/picture/label_lg_90030.png"
+							 style="
+    height: 34px;"></a></p>
+					<p> <span class="copy-right">©Copyright ©2007-2016开淘网
+							<a style='color:#818394;'>苏ICP备17012773号-3</a> 无锡电商之家网络科技有限公司</span>
+						<div style="width:300px;margin:0 auto; padding:20px 0;"> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32021302000583"
+							 style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"> <img src="../static/picture/gaba.png"
+								 style="float:left;" />
+								<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">苏公网安备
+									32021302000583号</p>
+							</a> </div>
+						<script type="text/javascript">
+							document.write(unescape(
+								"%3Cspan id='cnzz_stat_icon_1279254611'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/stat.php%3Fid%3D1279254611%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"
+							));
+						</script>
+					</p>
+				</div>
+			</div>
+		</div> <!-- 移动端nav列表start -->
+		<div class="mobliePhone-nav">
+			<!--       <div class="mobliePhone-search"> <input type="search" name="" placeholder="搜索"> <img src="static/picture/search@2x20.png"> </div> -->
+			<div class="mobliePhone-nav-list">
+				<!--问答一级菜单  -->
+				<dl class="mobliePhone-wenda-dl"> <dt>问答</dt>
+					<dd><a href="https://wen.kaitao.cn/category/2.html">网上开店</a></dd>
+					<dd><a href="https://wen.kaitao.cn/category/3.html">淘宝运营</a></dd>
+					<dd><a href="https://wen.kaitao.cn/category/4.html">活动大促</a></dd>
+					<dd><a href="https://wen.kaitao.cn/category/1.html">其他</a></dd>
+				</dl> <!-- 淘宝大学二级菜单 -->
+				<div class="mobliePhone-taobao">
+					<h5>淘宝大学</h5>
+					<ul class="mobliePhone-taobao-ul">
+						<!--                <li> <a href="http://www.kaitao.cn/taobaozixun">淘宝资讯</a> </li> -->
+						<li> <a href="https://www.kaitao.cn/kaidianzhidao">淘宝开店</a> <span> <a href="https://www.kaitao.cn/guize">淘宝规则</a>
+								<a href="https://www.kaitao.cn/taobaokaoshi">淘宝考试</a> <a href="https://www.kaitao.cn/taobaoyunying">运营策划</a>
+							</span> </li>
+						<li> <a href="https://www.kaitao.cn/taobaotuiguang">淘宝推广</a> <span> <a href="https://www.kaitao.cn/taobaohuodong">淘宝活动</a>
+								<a href="https://www.kaitao.cn/taoketuiguang">淘宝客</a> </span> </li>
+						<li> <a href="https://www.kaitao.cn/taobaojingyan">淘宝经验</a> <span> <a href="https://www.kaitao.cn/shoutao">手机淘宝</a>
+								<a href="https://www.kaitao.cn/shuadan">淘宝刷单</a> </span> </li>
+						<li>
+							<!--  <a href="javascript:void(0)">特色市场</a> --> <span> <a href="https://www.kaitao.cn/nongcuntaobao">农村淘宝</a> <a
+								 href="https://www.kaitao.cn/aliexpress">速卖通</a> <a href="https://www.kaitao.cn/jd">京东商城</a> <a href="https://www.kaitao.cn/pinduoduo">拼多多</a>
+								<a href="https://www.kaitao.cn/weixin">微信教程</a> </span> </li>
+					</ul>
+				</div>
+				<div class="mobliePhone-about-kaitao">
+					<ul class="kaitao-link-ul">
+						<li><a href="https://www.kaitao.cn/aboutus.html">关于开淘</a></li>
+						<li><a href="https://www.kaitao.cn/contact.html">联系我们</a></li>
+						<li><a href="https://www.kaitao.cn/cooperate.html">商务合作</a></li>
+						<!--      <li><a href="javascript:void(0)">诚聘英才</a></li> -->
+						<!--             <li><a href="javascript:void(0)">微博</a></li> <li><a href="javascript:void(0)">微信</a></li> -->
+					</ul>
+					<p>©Copyright ©2007-2017 www.kaitao.cn (开淘网) All Rights Reserved</p>
+				</div>
+			</div>
+		</div> <!-- 指向窗口顶端 -->
+		<div class="link-target" id="link-target"></div> <!-- 弹窗广告-->
+		<!--弹窗广告end-->
+		<!-- 左侧悬浮广告-->
+		<!-- 左侧悬浮广告end -->
+		<!-- 右侧悬浮广告-->
+		<!-- 右侧悬浮广告end -->
+		<!-- 右侧点击弹窗广告-->
+		<!--右侧点击弹窗广告end-->
+		<div style="display: none" class="tmp">article</div> <!-- 百度自动推送 -->
+		<script>
+			(function() {
+				var bp = document.createElement('script');
+				var curProtocol = window.location.protocol.split(':')[0];
+				if (curProtocol === 'https') {
+					bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+				} else {
+					bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+				}
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(bp, s);
+			})();
+
+			$('.navmenu-icon').click(function() {
+				$('.mobliePhone-nav').show();
+			})
+
+			//获取广告
+			$.get("/../static/articleSlide/20201217145646", function(result) {
+				// console.log(result);
+				var top_ad = result.top_ad;
+				var top_slide = result.top_slide;
+				var bottom_slide = result.bottom_slide;
+				var bottom_slide2 = result.bottom_slide2;
+				var right_slide = result.right_slide;
+				var right_slide_html = '';
+				for (var i = 0; i < right_slide.length; i++) {
+					right_slide_html += '<li><a href="' + right_slide[i].slide_url +
+						'" target="_blank" rel="nofollow"><img src="' + right_slide[i].slide_pic + '"></a></li>';
+				}
+				$('.article-ad-ul').html(right_slide_html);
+
+				if (top_ad != false) {
+					$('.top-ad img').attr('src', top_ad.slide_pic);
+				}
+				if (top_slide != false) {
+					//$('.top-slide').attr('src', top_slide.slide_pic)
+					if (top_slide.slide_url != '') {
+						$('.top-slide-a').attr('href', top_slide.slide_url)
+					}
+					if (top_slide.slide_pic == '') {
+						$('.top-slide').css("height", "0px");
+					} else {
+						$('.top-slide').css("background-image", "url("
+										/resources/static / images / +top_slide.slide_pic + ")");
+					}
+
+				}
+				if (bottom_slide != false) {
+					$('.bottom-slide').attr('src', bottom_slide.slide_pic);
+				}
+				if (bottom_slide2 != false) {
+					$('.bottom-slide2').attr('src', bottom_slide2.slide_pic);
+				}
+			});
+		</script> <!-- 微信 -->
+		<!-- 拼多多 -->
+		<!-- 京东 -->
+		<!-- 淘宝开店、农村淘宝 -->
+		<!-- 淘宝资讯、淘宝名店、淘宝杂谈、电商资讯 -->
+		<!-- 淘宝直通车、淘宝经验 -->
+		<!-- 淘宝客 -->
+		<!-- 淘宝刷单 -->
+		<!-- 淘宝规则、装修经验、运营策划、团队管理、淘宝推广等 -->
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?38096373dff31e23513338b1ce888a2b";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<script src="../static/js/article.js"></script>
+		<script type="text/javascript">
+			var header_pic = '/resources/static/picture/data/upload/20201210/5fd1ca6509415.png';
+			var header_url = 'http://a.kaitao.cn/a.php?id=284';
+
+			if (header_pic != '') {
+				$('.header-ad img').attr('src', header_pic);
+				$('.header-ad a').attr('href', header_url);
+			}
+		</script> <!-- 百度商桥 -->
+	</body>
+	<script>
+		carouselW = $(".lunbo").width()
+		var carouselH
+		if ($(".lunbo-w850").length != 0) {
+			carouselH = carouselW * 305 / 850
+		} else if ($(".lunbo-w335").length != 0) {
+			carouselH = carouselW * 255 / 335
+		} else {
+			carouselH = carouselW * 305 / 575
+		}
+		$(".carousel").css("width", carouselW)
+		$(".carousel").css("height", carouselH)
+		$(".lunbo").css("height", carouselH)
+		$(".wrap-left-top").css("height", carouselH)
+		$(".wrap-top").css("height", carouselH)
+		$(window).resize(function() { //窗口改变时 重置各个部分的宽度 高度值
+			carouselW = $(".lunbo").width()
+
+			if ($(".lunbo-w850").length != 0) {
+				carouselH = carouselW * 305 / 850
+			} else if ($(".lunbo-w335").length != 0) {
+				carouselH = carouselW * 255 / 335
+			} else {
+				carouselH = carouselW * 305 / 575
+			}
+			$(".carousel").css("width", carouselW)
+			$(".carousel").css("height", carouselH)
+			$(".lunbo").css("height", carouselH)
+			$(".wrap-left-top").css("height", carouselH)
+			$(".wrap-top").css("height", carouselH)
+			$(".lunbo-item").css({
+				"marginLeft": index00 * (-carouselW)
+			})
+		})
+
+		// PicTime()
+		var index00 = 1;
+		var len = $(".carousel").length //轮播个数
+		document.onvisibilitychange = function() {
+			if (document.visibilityState == "visible") {
+				//    PicTime()
+			} else {
+				clearInterval(timer);
+			}
+		}
+
+		function PicTime() {
+			timer = setTimeout(function() {
+				// console.log(index00)
+				if (index00 > len - 2) {
+					$(".lunbo-item").stop(true, true).animate({
+						"marginLeft": index00 * (-carouselW)
+					}, function() {
+						$(".lunbo-item").stop(true, true).animate({
+							"marginLeft": 0
+						}, 0)
+					})
+					$(".dot li").eq(0).addClass("dots").siblings().removeClass("dots")
+					index00 = 1
+				} else {
+					$(".lunbo-item").stop(true, true).animate({
+						"marginLeft": index00 * (-carouselW)
+					})
+					$(".dot li").eq(index00).addClass("dots").siblings().removeClass("dots")
+					index00++;
+				}
+				//   PicTime()
+			}, 5000)
+		}
+
+		// 点击当前索引跳转
+		$(".dot li").click(function() {
+			index00 = $(this).index()
+			if (index00 > len - 2) {
+				$(".lunbo-item").stop(true, true).animate({
+					"marginLeft": index00 * (-carouselW)
+				}, function() {
+					$(".lunbo-item").stop(true, true).animate({
+						"marginLeft": 0
+					}, 0)
+				})
+				$(".dot li").eq(0).addClass("dots").siblings().removeClass("dots")
+				index00 = 1
+
+			} else {
+
+				$(".lunbo-item").stop(true, true).animate({
+					"marginLeft": index00 * (-carouselW)
+				})
+				$(".dot li").eq(index00).addClass("dots").siblings().removeClass("dots")
+				index00++;
+			}
+		})
+		//触碰轮播停止
+		$(".lunbo").hover(function() {
+			clearTimeout(timer)
+		}, function() {
+			//    PicTime()
+		})
+
+		// 悬浮
+		hasFix();
+		window.onscroll = function() {
+			hasFix();
+		};
+
+		function hasFix() {
+			var height = $('.rd-ad-wrap').offset().top;
+			var nowtop = document.documentElement.scrollTop;
+			if (height < nowtop + 20) {
+				$('#rd-ad').addClass("fixed")
+			} else {
+				$('#rd-ad').removeClass("fixed")
+			}
+		}
+	</script>
+
+
+
+
+</html>

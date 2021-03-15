@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻信息</title>
+    <link rel="stylesheet" href="../static/layui/css/layui.css">
+</head>
+<body>           
+<table id="tb-article" lay-filter="tb-article"></table>
+
+        
+
+    <!--编辑表单-->
+    <div class="layui-row" id="editArticle" style="display:none;">
+        <div class="layui-col-md10">
+            <form class="layui-form layui-from-pane" id="saveArticle" style="margin-top:20px">
+
+                
+
+                <input type="hidden" name="id" id="id">
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">文章标题</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" id="title" required lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                
+                
+                
+
+            
+
+
+            
+
+                <div class="layui-form-item" style="margin-top:40px" id="check">
+                    <div class="layui-input-block">
+                        <button class="layui-btn  layui-btn-submit " lay-submit="" lay-filter="saveArticle">保存</button>
+                        <!--<button type="reset" class="layui-btn layui-btn-primary">重置</button>-->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/html" id="toolbarDemo">
+        
+        <div class="layui-btn-container">
+            <button class="layui-btn layui-btn-sm" lay-event="add"><i class="layui-icon">&#xe608;</i>新增</button>
+    <button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="remove"><i class="layui-icon">&#xe640;</i>删除</button>
+            <button class="layui-btn layui-btn-sm" lay-event="getCheckData">获取选中行数据</button>
+            <button class="layui-btn layui-btn-sm" lay-event="getCheckLength">获取选中数目</button>
+            <button class="layui-btn layui-btn-sm" lay-event="isAll">验证是否全选</button>
+    
+</div>
+
+</script>
+
+    <script type="text/html" id="barDemo">
+        
+        <a class="layui-btn layui-btn-sm" lay-event="edit"><i class="layui-icon">&#xe642;</i>修改</a>
+</script>
+
+    <!--<div class="layui-footer">
+         底部固定区域 
+        © kaitao.com
+    </div>-->
+
+    
+        <script src="../static/js/jquery.js"></script>
+		<script src="../static/layui/layui.all.js"></script>
+		<script src="../static/js/urls.js"></script>
+		<script>
+			var element, layer, table, form;
+
+			$(function() {
+				// 使用模块
+				layui.use(['element', 'layer',  'table', 'form'], function() {
+					element = layui.element;
+					layer = layui.layer;
+					table = layui.table;
+					form = layui.form;
+					
+				});
+
+
+
+				//第一个实例
+				var userTable = table.render({
+					elem: '#tb-article',
+					height: 585,
+					url: ctx+'/newsdown/list' ,//数据接口					
+					page: true ,//开启分页					
+					toolbar: '#toolbarDemo',										
+					cols: [[ 
+						//表头							
+								 {type: 'checkbox', fixed: 'left'}
+								,{field:'id', title:'ID', width:80, fixed: 'left',  sort: true, totalRowText: '合计'}    
+								,{field:'title', title:'文章标题', width:260}						
+											
+								,{fixed: 'right', title:'操作', width:100,toolbar: '#barDemo'}
+						]]
+											
+				});
+
+
+		
+
+
+    
+
+				//监听表单提交
+				// 修改
+				form.on('submit(saveArticle)', function(data) {
+					layer.alert(JSON.stringify(data.field));
+					$.ajax({
+						url: ctx+'/newsdown/save',
+						type: 'POST',
+						contentType: "application/json",
+						dataType: "json",
+						data: JSON.stringify(data.field),
+						success: function(result) {
+							if (result.code == 200) {
+								// layer.msg("修改成功！", {icon: 6});
+								setTimeout(function() {
+									layer.closeAll(); //关闭所有的弹出层
+									userTable.reload();
+								}, 300);
+							} else {
+								layer.msg("操作失败！", {
+									icon: 5
+								});
+							}
+						}
+					});
+
+					return false;
+
+				});
+
+				//工具栏事件
+				table.on('toolbar(tb-article)', function(obj) {
+					var checkStatus = table.checkStatus(obj.config.id);
+					var checkData = checkStatus.data;
+					var ids = [];
+					switch (obj.event) {
+						// 新增
+						case 'add':
+						    $("#id").val('');
+							
+							$("#title").val('');
+								
+																
+							layer.open({
+								type: 1,
+								offset: '10px',
+								title: "新增文章",
+								area: ['500px', '450px'],
+								content: $("#editArticle")
+							});
+
+
+							break;
+							// 删除
+						case 'remove':
+							if (checkData.length == 0) {
+								layer.alert('请选择要操作的行');
+							} else {
+								layer.confirm('确定要删除吗？', function(index) {
+									for (var i = 0; i < checkData.length; i++) {
+										ids.push(checkData[i].id);
+									}
+									//layer.alert(JSON.stringify(ids));
+									$.ajax({
+										url: ctx+'/newsdown/remove',
+										type: 'POST',	
+										contentType: "application/json",
+										dataType: "json",
+										data: JSON.stringify(ids),
+										success: function(result) {
+											if (result.code == 200) {
+												setTimeout(function() {
+													layer.closeAll(); //关闭所有的弹出层
+													userTable.reload();
+												}, 300);
+											}else {
+                                        layer.msg("操作失败！", {icon: 5});
+										}
+										}
+									});
+								});
+							}
+							break;
+						case 'getCheckData':
+						var data = checkStatus.data;
+							layer.alert(JSON.stringify(data));
+							break;
+						case 'getCheckLength':
+							var data = checkStatus.data;
+							layer.msg('选中了：' + data.length + ' 个');
+							break;
+						case 'isAll':
+							layer.msg(checkStatus.isAll ? '全选' : '未全选')
+							break;
+					};
+				});
+
+				// 监听工具条
+				table.on('tool(tb-article)', function(obj) {
+					var data = obj.data;
+					// 修改
+					if (obj.event === 'edit') {
+						$("#id").val(data.id);
+						
+						$("#title").val(data.title);
+						
+							
+
+						layer.open({
+							type: 1,
+							offset: '10px',
+							title: "修改文章",
+							area: ['500px', '450px'],
+							content: $("#editArticle")
+						});
+					}
+				});
+			});
+		</script>
+</body>
+</html>

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--禁止百度转码-->
+    <meta http-equiv="Cache-Control" content="no-transform " /> <!-- 跳转适配 -->
+    <meta name="mobile-agent" content="format=html5;url=https://m.kaitao.cn">
+    <link rel="alternate" media="only screen and(max-width: 640px)" href="https://m.kaitao.cn">
+    <meta name="applicable-device" content="pc,mobile">
+    <title>开淘网-教你如何开淘宝网店，是淘宝店长的淘宝大学 </title>
+    <meta name="keywords" content="开网店,淘宝网店,开个网店,如何开网店,怎样开网店,网上开店,淘宝大学,淘宝开店" />
+    <meta name="description"
+        content="开淘网定位为淘宝电商行业第一网站，是广大网店店长的淘宝大学。旨在教你如何淘宝网上开店的方法、步骤以及经验，内设淘宝网店经验、网上开店指南、网店货源，并全力为网店店长们营造一个电子商务学习、交流平台">
+    <!-- <link rel="shortcut icon" href="https://wen.kaitao.cn/favicon.ico" /> -->
+    <link rel="stylesheet" href="../static/css/font_1107365_x3govcwg7sd.css">
+    <link rel="stylesheet" href="../static/css/jquery.pagination.css" />
+    <link rel="stylesheet" href="../static/css/ds-un-index.css">
+    <link rel="stylesheet" href="../static/layui/css/layui.css">
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/urls.js"></script>
+    
+    
+    
+
+
+
+    <style type="text/css">
+        .article-ad-ul>li img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 2px;
+        }
+
+        .costFree img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 2px;
+        }
+
+        .popup {
+            position: fixed;
+            top: 20%;
+            left: 25%;
+            width: 600px;
+            height: 430px
+        }
+
+        .popup-close {
+            height: 30px;
+            width: 130px;
+            position: relative;
+            top: -50px;
+            left: 337px;
+        }
+
+        @media (min-width: 1200px) {
+            .post_title {
+                font-size: 22px
+            }
+
+            .article-item-content h5 {
+                width: 550px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    </style>
+    <style>
+        #newest-article {
+            display: none
+        }
+    </style>
+</head>
+
+<body class="bg-body-fff article-body ">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/all.css">
+    <div class="index-header" id="index-header">
+        <div class="container">
+            <div class="row index-header-flex">
+                <div class="a-logo-tag"> <a href="/"><img class="pc-logo" src="../static/picture/pc-logo@2x.png"
+                            alt="pc-logo"></a> <a href="/"><img class="phone-logo"
+                            src="../static/picture/phone-logo@2x.png" alt="phone-logo"></a> </div> <span> <i>问答</i> <img
+                        src="../static/picture/hide_menu@2x20.png" alt="隐藏菜单"> </span>
+                <div class="header-ad"> <a href="http://a.kaitao.cn/a.php?id=284" target="_blank"><img
+                            src="../static/picture/5fd1ca6509415.png" style="margin-left: -55px"></a>
+                    <!-- <a href='https://www.kaitao.cn/index/mynews.htm' target="_blank"><img src="static/picture/ad.png" style="margin-left: -55px"></a> -->
+                </div>
+                <div class="wrap-tag">
+                    <div class="header-other"> <img class="img-search" src="../static/picture/search@2x20.png" alt="搜索">
+                        <ul class="personnal-info-ul personnal-info-pc">
+                            <li><a href="https://wen.kaitao.cn/user/message.html">个人主页</a></li>
+                            <li><a href="javascript:void(0)">退出账号</a></li>
+                        </ul>
+                    </div> <span class="pc-tiwen"><a href="https://wen.kaitao.cn?tiwen=1" rel="nofollow"
+                            class="header-tiwen">提问</a></span>
+                    <div class="nav-header">
+                        <ul class="nav-header-ul">
+                            <li class="active"> <a href="/taobao">淘宝大学</a> </li>
+                            <li> <a href="regist.html">注册</a> </li>
+                            <li> <a href="login.html">登录</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wrap-search"> <input type="text" name="q" placeholder="搜索.." id="search-input"><i>取消</i>
+                    <img src="../static/picture/green_search@2x20.png" id="search-submit" alt="搜索"> </div>
+            </div>
+        </div> <!-- 首页二级导航 9.25 -->
+    </div>
+    <div class="subnav article-subnav">
+        <div class="container">
+            <ul class="subnav-list">
+                <li class="subnav-item"><a href="/">首页</a></li>
+                <li class="subnav-item"> <a href="https://www.kaitao.cn/kaidianzhidao">淘宝开店</a> <span></span>
+                    <ul class="subnav-item-slide">
+                        <li><a href="https://www.kaitao.cn/guize">淘宝规则</a></li>
+                        <li><a href="https://www.kaitao.cn/taobaokaoshi">淘宝考试</a></li>
+                        <li><a href="https://www.kaitao.cn/mingdian">淘宝名店</a></li>
+                        <li><a href="https://www.kaitao.cn/zhuangxiujingyan">淘宝装修</a></li>
+                        <li><a href="https://www.kaitao.cn/taobaoyunying">运营策划</a></li>
+                    </ul>
+                </li>
+                <li class="subnav-item"> <a href="https://www.kaitao.cn/taobaotuiguang">淘宝推广</a> <span></span>
+                    <ul class="subnav-item-slide">
+                        <li><a href="https://www.kaitao.cn/wangdianseo">网店seo</a></li>
+                        <li><a href="https://www.kaitao.cn/taoketuiguang">淘宝客</a></li>
+                        <li><a href="https://www.kaitao.cn/zhitongche">淘宝直通车</a></li>
+                        <li><a href="https://www.kaitao.cn/taobaohuodong">淘宝活动</a></li>
+                    </ul>
+                </li>
+                <li class="subnav-item"> <a href="https://www.kaitao.cn/taobaojingyan">淘宝经验</a> <span></span>
+                    <ul class="subnav-item-slide">
+                        <li><a href="https://www.kaitao.cn/taobaotuandui">团队管理</a></li>
+                        <li><a href="https://www.kaitao.cn/shoutao">手机淘宝</a></li>
+                        <li><a href="https://www.kaitao.cn/tmall">天猫商城</a></li>
+                        <li><a href="https://www.kaitao.cn/shuadan">淘宝刷单</a></li>
+                        <li><a href="https://www.kaitao.cn/taobaozatan">淘宝杂谈</a></li>
+                    </ul>
+                </li>
+                <li class="subnav-item"> <a href="#">特色市场</a> <span></span>
+                    <ul class="subnav-item-slide">
+                        <li><a href="https://www.kaitao.cn/nongcuntaobao">农村淘宝</a></li>
+                        <li><a href="https://www.kaitao.cn/aliexpress">速卖通</a></li>
+                        <li><a href="https://www.kaitao.cn/jd">京东商城</a></li>
+                        <li><a href="https://www.kaitao.cn/weixin">微信教程</a></li>
+                        <li><a href="https://www.kaitao.cn/pinduoduo">拼多多</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="subnav-item"> <a href="http://a.kaitao.cn/a.php?id=78" target="_blank" style="color:red">模板素材</a> <a rel="nofollow" onclick="_hmt.push(['_trackEvent', 'kaitao', 'click', 'nav', '1807'])" href="https://www.taodianjia.com/?hmsr=kaitao&hmpl=nav&hmcu=1807&utm_source=kaitao" target="_blank" style="color:red">天猫转让</a> <img src="static/picture/hot.gif" width="20"  style="margin-bottom: 20px;margin-left: -5px"> </li> <li class="subnav-item"> <a href="https://www.kaitao.cn/video" target="_blank" style="color:red">淘宝课程</a> <img src="static/picture/mianfei.png" width="20"  style="margin-bottom: 20px;margin-left: -5px"> </li>
+-->
+                <li class="subnav-item"> <a href="#">直播电商</a> <span></span>
+                    <ul class="subnav-item-slide">
+                        <li><a href="https://www.kaitao.cn/douyin">抖音</a></li>
+                        <li><a href="https://www.kaitao.cn/kuaishou">快手</a></li>
+                        <li><a href="https://www.kaitao.cn/wxzhibo">微信直播</a></li>
+                        <li><a href="https://www.kaitao.cn/tbzhibo">淘宝直播</a></li>
+                    </ul>
+                </li>
+                <li class="subnav-item"> <a href="#">免费课程</a> <span></span>
+                    <ul class="subnav-item-slide">
+                        <li><a href="https://www.kaitao.cn/course/1.htm">淘宝课程</a></li>
+                    </ul>
+                </li>
+                <li class="subnav-item"> <a href="https://www.kaitao.cn/tool">实战工具</a> </li>
+                <!--
+          <li class="subnav-item"> <a href="https://www.kaitao.cn/index/mynews.htm" target="_blank" style="color:red">招商合作</a> </li>
+-->
+            </ul>
+            <div class="subnav-ad"> </div>
+        </div>
+    </div> <!-- 百度统计-->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?0dbb2af70917952aba0ffea5e0291883";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/jquery.dotdotdot.min.js"></script>
+    <script src="../static/js/public.js" charset="utf-8"></script>
+    <script>
+        var isLogin = false;
+        var askurl = 'https://wen.kaitao.cn';
+        $('#search-input').keydown(function (e) {
+            if (e.keyCode == 13) {
+                var val = $('#search-input').val();
+                var url = 'http://s.kaitao.cn/cse/search?s=15491038084637784056&q=' + val;
+                window.open(url);
+            }
+        })
+        $('#search-submit').click(function () {
+            var val = $('#search-input').val();
+            var url = 'http://s.kaitao.cn/cse/search?s=15491038084637784056&q=' + val;
+            window.open(url);
+        })
+        function showText() {
+            var a = $(".taobao-article-ul>li>a>div>h5"),
+                text = a.html();
+            if (a.is(a)) {
+                if (text.length > 28) {
+                    a.html(text.substring(0, 28) + "...");
+                }
+            }
+        }
+        $(function () {
+            showText();
+            $('.subnav-item').on('mouseover', function () {
+                $(this).find('.subnav-item-slide').finish().show();
+            }).on('mouseout', function () {
+                $(this).find('.subnav-item-slide').finish().hide();
+            });
+        })
+        $('.header-tiwen').click(function () {
+            window.open(askurl + '?tiwen=1');
+        })
+        //手机端nav下拉列表显示与隐藏
+        $(".index-header-flex>span").click(function () {
+            var mobliePhone_nav_ist = $(".mobliePhone-nav"),
+                display = mobliePhone_nav_ist.css("display"),
+                body = $(document.body);
+            if ("none" == display) {
+                body.addClass("body-fixed");
+                mobliePhone_nav_ist.show();
+            } else {
+                body.removeClass("body-fixed");
+                mobliePhone_nav_ist.hide();
+            }
+        })
+    </script> <!-- 360收录 -->
+    <script>(function () {
+                var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?e411ee388111103b05965e8488d13eee" : "https://jspassport.ssl.qhimg.com/11.0.1.js?e411ee388111103b05965e8488d13eee";
+                document.write('<script src="' + src + '" id="sozz"><\/script>');
+            })();
+    </script> <!-- index-mian -->
+    <div class="taobao-wrap-main">
+        <div class="wrap-left">
+            <!--首页-->
+            <!--左边头部-->
+            <div class="wrap-left-top">
+                <div class="lunbo">
+                    <div class="lunbo-item" style="margin-left:0p x;">
+                        <a href="lunbo.html" class="carousel" target="_blank" rel="nofollow" style="">
+                            <img src="../static/picture/o_1edoa71hptsbhth15qj18hqhlm9.png" rel="nofollow" /> </a>
+                        <a href="lunbo.html" class="carousel" target="_blank" rel="nofollow" style="">
+                            <img src="../static/picture/o_1eo1opstsd69a9anl1ciikh9.jpeg" rel="nofollow" /> </a>
+                        <a href="lunbo.html" class="carousel" target="_blank" rel="nofollow" style="">
+                            <img src="../static/picture/o_1eo1oq98ckkiodp1pq971j1qnm9.jpeg" rel="nofollow" /></a>
+                        <a href="lunbo.html" class="carousel" target="_blank" rel="nofollow" style="">
+                            <img src="../static/picture/o_1edv6q62917st1g6n1meejei1bfo9.png" rel="nofollow" /></a>
+                        <a href="lunbo.html" class="carousel" target="_blank" rel="nofollow" style="">
+                            <img src="../static/picture/o_1edv6qel9192c6lcac216104fg9.png" rel="nofollow" /></a>
+                        <a href="lunbo.html" class="carousel" target="_blank" rel="nofollow" style="">
+                            <img src="../static/picture/o_1edv6qnb31a0p18ns14upl1113pl9.png" rel="nofollow" /></a>
+                        <a href="lunbo.html" class="carousel" target="_blank" rel="nofollow" style="">
+                            <img src="../static/picture/o_1edoa71hptsbhth15qj18hqhlm9.png" rel="nofollow" /> </a>
+                    </div>
+                    <ul class="dot">
+                        <li class="dots"></li>
+                        <li class=""></li>
+                        <li class=""></li>
+                        <li class=""></li>
+                        <li class=""></li>
+                        <li class=""></li>
+                    </ul>
+                </div>
+                <div class="wrap-left-top-right">
+                    <a href="lunbo.html" class="wrap-left-top-right-img" target="_blank" rel="nofollow">
+                        <img src="../static/picture/o_1ee2256201qkt9kae341nlfs639.jpg" alt="淘宝大学首页焦点小图TS07" rel="nofollow" /> </a>
+                    <a href="lunbo.html" class="wrap-left-top-right-img" target="_blank" rel="nofollow">
+                        <img src="../static/picture/o_1ep5m28ib7ffqp7if9sjkodi9.png" alt="淘宝大学首页焦点小图TS08" rel="nofollow" /></a>
+                </div>
+                </div>
+            
+                
+            
+            
+                <!--二级页面-->
+            <div class="wenti-list mt30">
+                <ul class="taobao-article-ul">
+                                                                                                                                                                                 </ul>
+            </div>
+    <script src="../static/layui/layui.all.js" charset="utf-8"></script>
+        <!--二级页面遍历后端-->
+        
+    <script type="text/javascript">
+            var page = 1;
+            var tp = 0;
+             
+            $(function(){
+                showData();
+                
+            });
+             
+            function upPage(){
+                if(page>1){
+                    page--;
+                    showData();
+                }
+                 
+            }
+             
+            function downPage(){
+                if(page<tp){
+                    page++;
+                    showData();
+                }
+                 
+            }
+            
+
+    function showData() {
+            $.ajax({
+                url: ctx + "/kaitao/query?page="+page, //json文件位置
+                type: "GET", //请求方式为get
+                //  dataType: "json", //返回数据格式为json                  
+                //contentType: "application/json; charset=utf-8",				
+                success: function (data) { //请求成功完成后要执行的方法 
+                    var rel = data.content;                
+		            tp = data.totalPages;
+                    // console.log(tp);
+                    var html = "";
+                    $.each(rel,function (i, item) { //这里的函数参数是键值对的形式，i代表键名，item代表值                                                                  
+                        html += ' <li> ';
+                        html += ' <div class="taobao-article-item">';
+                        html += ' <a class="article-item-imgbox" href="title.html?id=' + item.id + '"  target="_blank" rel="nofollow" style="max-height: 150px">';
+                        html += ' <img src="../static/img/' + item.fileName + '" width="200" height="150"></a>';
+                        html += ' <div class="article-item-right">';
+                        html += ' <a class="article-item-content" href="title.html?id=' + item.id + '" target="_blank" rel="nofollow">';
+                        html += ' <h5>' + item.title + '</h5><p>' + item.content + '</p></a>';
+                        html += ' <div class="article-item-info">';
+                        html += ' <img src="../static/picture/noavatar.jpg">';
+                        html += ' <i class="article-item-username">' + item.name + '</i>';
+                        html += ' <a href="/zhuangxiujingyan" class="article-item-category">' + item.type + '</a>';
+                        html += ' <i class="article-item-count">' + item.reader + '</i>';
+                        html += ' <span class="article-item-time">2020-12-17 14:56:55</span> </div></div></div></li></ul>';
+                        
+                        
+                    });
+                    $(".taobao-article-ul").html(html);
+
+                    
+                }
+            });
+        }
+    </script>
+    
+
+            
+  
+            <!--分页-->
+            <div class="load-img">
+                <ul class="pager">
+                    <div class="box">
+                        <div id="pagination2" class="page fl"></div>
+                        <a href="javascript:upPage();" style="color:#1E9FFF;">上一页</a>  <a href="javascript:downPage();" style="color:#1E9FFF;">下一页</a>
+                    </div>                                                                           
+                </ul> <!--   <img src="static/picture/load_img@2x20.png" alt="加载ing"> -->
+            </div>
+
+        </div>
+        
+
+       
+        
+
+
+
+
+
+
+        <div class="wrap-right">
+            <!--首页-->
+            <!--右上广告-->
+            <div class="wrap-right-top"> <a href="lunbo.html" target="_blank" rel="nofollow"> 
+                <img src="../static/picture/o_1ekdc8i5b1sja1tjs158f18kvi6l9.jpg" rel="nofollow" /> </a> </div>
+
+
+            <div class="news">
+                <h2 class="news-tit"><i class="iconfont icon-yuedu1"></i> 推荐阅读</h2>
+                <ul class="news-list" id="rd-read"></ul>
+            </div>
+
+            <script>
+                $(function() {
+                            $.ajax({
+                            url: ctx+"/news/get", //json文件位置
+                            type: "GET", //请求方式为get
+                            dataType: "json", //返回数据格式为json                  
+                            //contentType: "application/json; charset=utf-8",				
+                            success: function(data) { //请求成功完成后要执行的方法 
+                            var data = data.data
+                                var html = "";
+                                
+                            $.each(data, function(i, item) { //这里的函数参数是键值对的形式，i代表键名，item代表值                                                              
+                                html += '<li> ';
+                                html += ' <a href="https://www.kaitao.cn/article/20190228161752.htm" target="_blank">';
+                                html += '<img src="../static/picture/' + item.fileName + '" alt="拼多多直通车100%卡位成功技巧实操分享" />' + item.title + '</a></li> ';
+                            });
+                            $(".news-list").append(html);
+                            }
+                       })
+                        })
+                
+            </script>
+            <!--右中广告-->
+            <ul class="ad" id="rd-ad">
+                <li> <a href="lunbo.html" target="_blank" rel="nofollow"> 
+                    <img src="../static/picture/o_1ekd7b2mj15vnb8419e61hopttd9.jpg" alt="淘宝大学首页右侧焦点图TS15" rel="nofollow" /> </a> </li>
+                <li> <a href="lunbo.html" target="_blank" rel="nofollow"> 
+                    <img src="../static/picture/o_1edo90docgdn1l8k1sg618hqalh9.png" alt="淘宝大学首页右侧焦点图TS16" rel="nofollow" /> </a> </li>
+                <li> <a href="lunbo.html" target="_blank" rel="nofollow"> 
+                    <img src="../static/picture/o_1eoefduhqs2h1nen1tkbiob18vi9.png" alt="淘宝大学首页右侧焦点图TS17" rel="nofollow" /> </a> </li>
+            </ul>
+
+
+            
+            <div class="news">
+                <h2 class="news-tit"> <i class="iconfont icon-dengpaolinggan"></i> 你可能感兴趣</h2></a>
+                <ul class="interest" id="re-interest"></ul>
+            </div>
+
+            <script>
+                $(function() {
+                            $.ajax({
+                            url: ctx+"/newsdown/get", //json文件位置
+                            type: "GET", //请求方式为get
+                            //dataType: "json", //返回数据格式为json                  
+                            //contentType: "application/json; charset=utf-8",				
+                            success: function(data) { //请求成功完成后要执行的方法 
+                            var data = data.data
+                                var html = "";                               
+                            $.each(data, function(i, item) { //这里的函数参数是键值对的形式，i代表键名，item代表值                                                                                              
+                                html += '<li> ';
+                                html += ' <a href="https://www.kaitao.cn/taoketuiguang" target="_blank">' + item.title + '</a> </li>';                                                              
+                            });
+                            
+                            $(".interest").append(html);
+                            }
+                       })
+                        })
+            </script>
+
+
+
+
+
+            <!--二级页面-->
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-about">
+            <div class="about-main clearfix">
+                <div class="about-contant mr">
+                    <h4>关于</h4>
+                    <p class="about-con introduce">
+                        开淘网（www.kaitao.cn)建立于2010年。致力于推动电商行业信息，运营干货传播，通过交流分享、大咖互动等方式解决电商从业者面临的难题。是国内最具影响力的电商资讯平台之一。 </p>
+                </div>
+                <div class="about-link mr">
+                    <h4>链接</h4>
+                    <p class="about-con"><a href="https://www.kaitao.cn/aboutus.html" target="_blank">关于我们</a></p>
+                    <p class="about-con"><a href="https://www.kaitao.cn/contact.html" target="_blank">联系我们</a></p>
+                    <p class="about-con"><a href="https://www.kaitao.cn/index/mynews.htm" target="_blank">商务合作</a></p>
+                    <p class="about-con"><a href="https://www.kaitao.cn/job.html" target="_blank">诚聘英才</a></p>
+                    <p class="about-con"><a href="" target="_blank"></a></p>
+                </div>
+                <div class="about-partner mr">
+                    <h4>合作伙伴</h4> <a href="javacript:void(0);"> <img
+                            src="../static/picture/o_1da8cmgucai3164e6sv1pq9nbb1v.png"> </a><a href="javacript:void(0);">
+                        <img src="../static/picture/o_1da8cnaqo16tprfagog1ivt9e532.png"> </a><a href="javacript:void(0);">
+                        <img src="../static/picture/o_1da8cmou03dp123f74r1g4n15mv29.png"> </a><a href="javacript:void(0);">
+                        <img src="../static/picture/o_1da8cmsmomqt15iprg4td41eio2e.png"> </a><a href="javacript:void(0);">
+                        <img src="../static/picture/o_1da8cmvneg00fap1fn1cd713ve2j.png"> </a><a href="javacript:void(0);">
+                        <img src="../static/picture/o_1da8cnnub1pfstak119m1n1ujgl37.png"> </a>
+                </div>
+                <div class="about-code mr">
+                    <h4>商务合作</h4>
+                    <div class="attention"> <img src="../static/picture/o_1eoegfagslif17pk1s3es1li3u1v.jpg"> </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="footer-copy">
+            <div class="footer-main ">
+                <p style="
+            text-align:  center;
+        "> <a target="_blank" href="http://bzrz.zhongqixin360.com/index.php/index/show/index?id=5202" style="
+            margin-right: 10px;
+        "><img width="112px" height="34px" src="../static/picture/zqx.png"></a> <a target="cyxyv"
+                        href="https://v.yunaq.com/certificate?domain=www.kaitao.cn&amp;from=label&amp;code=90030"> <img
+                            src="../static/picture/label_lg_90030.png" style="
+            height: 34px;"></a> </p>
+                <p> <span class="copy-right">©Copyright ©2007-2016开淘网
+                        <a style='color:#818394;'>苏ICP备17012773号-3</a> 无锡电商之家网络科技有限公司</span>
+                <div style="width:300px;margin:0 auto; padding:20px 0;"> <a target="_blank"
+                        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32021302000583"
+                        style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"> <img
+                            src="../static/picture/gaba.png" style="float:left;" />
+                        <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">苏公网安备
+                            32021302000583号</p>
+                    </a> </div>
+                <script
+                    type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279254611'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/stat.php%3Fid%3D1279254611%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+                </p>
+            </div>
+        </div>
+        </div>
+
+
+    <div class="kaitai-text"> <span>©2017 开淘</span> </div> <!-- 移动端nav列表start -->
+    <div class="mobliePhone-nav">
+        <!--       <div class="mobliePhone-search"> <input type="search" name="" placeholder="搜索"> <img src="static/picture/search@2x20.png"> </div> -->
+        <div class="mobliePhone-nav-list">
+            <!--问答一级菜单  -->
+            <dl class="mobliePhone-wenda-dl">
+                <dt>问答</dt>
+                <dd><a href="https://wen.kaitao.cn/category/2.html">网上开店</a></dd>
+                <dd><a href="https://wen.kaitao.cn/category/3.html">淘宝运营</a></dd>
+                <dd><a href="https://wen.kaitao.cn/category/4.html">活动大促</a></dd>
+                <dd><a href="https://wen.kaitao.cn/category/1.html">其他</a></dd>
+            </dl> <!-- 淘宝大学二级菜单 -->
+            <div class="mobliePhone-taobao">
+                <h5>淘宝大学</h5>
+                <ul class="mobliePhone-taobao-ul">
+                    <!--                <li> <a href="http://www.kaitao.cn/taobaozixun">淘宝资讯</a> </li> -->
+                    <li> <a href="https://www.kaitao.cn/kaidianzhidao">淘宝开店</a> <span> <a
+                                href="https://www.kaitao.cn/guize">淘宝规则</a> <a
+                                href="https://www.kaitao.cn/taobaokaoshi">淘宝考试</a> <a
+                                href="https://www.kaitao.cn/taobaoyunying">运营策划</a> </span> </li>
+                    <li> <a href="https://www.kaitao.cn/taobaotuiguang">淘宝推广</a> <span> <a
+                                href="https://www.kaitao.cn/taobaohuodong">淘宝活动</a> <a
+                                href="https://www.kaitao.cn/taoketuiguang">淘宝客</a> </span> </li>
+                    <li> <a href="https://www.kaitao.cn/taobaojingyan">淘宝经验</a> <span> <a
+                                href="https://www.kaitao.cn/shoutao">手机淘宝</a> <a
+                                href="https://www.kaitao.cn/shuadan">淘宝刷单</a> </span> </li>
+                    <li>
+                        <!--  <a href="javascript:void(0)">特色市场</a> --> <span> <a
+                                href="https://www.kaitao.cn/nongcuntaobao">农村淘宝</a> <a
+                                href="https://www.kaitao.cn/aliexpress">速卖通</a> <a
+                                href="https://www.kaitao.cn/jd">京东商城</a> <a
+                                href="https://www.kaitao.cn/pinduoduo">拼多多</a> <a
+                                href="https://www.kaitao.cn/weixin">微信教程</a> </span> </li>
+                </ul>
+            </div>
+            <div class="mobliePhone-about-kaitao">
+                <ul class="kaitao-link-ul">
+                    <li><a href="https://www.kaitao.cn/aboutus.html">关于开淘</a></li>
+                    <li><a href="https://www.kaitao.cn/contact.html">联系我们</a></li>
+                    <li><a href="https://www.kaitao.cn/cooperate.html">商务合作</a></li>
+                </ul>
+                <p>©Copyright ©2007-2017 www.kaitao.cn (开淘网) All Rights Reserved</p>
+            </div>
+        </div>
+    </div> <!-- 操作提示 -->
+    <!-- 指向窗口顶端 -->
+    <div class="link-target" id="link-target"></div> <a href="#link-target"><img class="img-backTop"
+            src="../static/picture/back_top@2x30.png"></a> <!-- 弹窗广告-->
+    <!--弹窗广告end-->
+    <!-- <script src="static/js/jquery-1.11.0.min.js"></script> -->
+    <script src="../static/js/jquery.dotdotdot.min.js"></script>
+    <script src="../static/js/public.js" charset="utf-8"></script>
+    <script src="../static/js/jquery.pagination.min.js"></script>
+    <!--<script src="static/js/ds-kaitao.js" charset="utf-8"></script>-->
+    <script src="../static/js/slide.js" charset="utf-8"></script>
+    
+
+    <script>    var pp = "";
+    </script>
+    
+    <!-- <script src="static/js/un-index.js" charset="utf-8"></script> -->
+      <!--<script>    
+        var currentPage = Number('1');
+        var totalPage = Number('187550');
+        var pathinfo = 'http://localhost:8888/kaitao/list';
+        $(function () {
+            $("#pagination2").pagination({
+                currentPage: currentPage,
+                totalPage: Math.round(totalPage / 10),
+                isShow: false,
+                count: 6,
+                prevPageText: "<",
+                nextPageText: ">",
+                callback: function (current) {
+                    $("#current2").text(current)
+                }
+            });
+            $("#pagination2 a").each(function () {
+                var current = $(this).attr('data-current');
+                var url = pathinfo + current + '.htm';
+                $(this).attr('href', url);
+            });
+            $('#pagination2 a').click(function () {
+                var current = $(this).attr('data-current');
+                window.location.href = pathinfo + current + '.htm';
+            })
+        });
+    </script>-->
+    <script>    
+        $(function () {
+            //showText();
+            $('.subnav-item').on('mouseover', function () {
+                $(this).find('.subnav-item-slide').finish().show();
+            }).on('mouseout', function () {
+                $(this).find('.subnav-item-slide').finish().hide();
+            });
+        })
+        $('.popup-close').click(function () {
+            $('.popup').hide();
+        })
+
+        function showpopup() {
+            if (document.cookie.indexOf("a=hello") == -1) {
+                var t = new Date(new Date().getTime() + 1000 * 60 * 60 * 1);
+                document.cookie = "a=hello; expires=" + t.toGMTString();
+                $('.popup').show();
+            }
+        }
+
+        setTimeout("showpopup()", 3000);
+
+
+        $('.carousel').carousel({
+            interval: 2500
+        });
+    </script>
+
+
+</body>
+
+</html>

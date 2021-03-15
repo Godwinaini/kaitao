@@ -1,0 +1,17 @@
+#服务端容器的配置
+server:
+  port: 8082
+#数据库配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/kaitao?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+#jpa配置
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+

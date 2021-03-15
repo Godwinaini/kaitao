@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="../static/css/regist.css">
+    <script src="../static/js/jquery.js"></script>
+</head>
+<body>
+    <form id="form-reg">
+        <div id="regist-box">
+            <h1>Regist</h1>
+            <div class="form">
+                <div class="item">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input type="text" name="username" placeholder="Username">
+                </div>
+                <div class="item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+            </div>
+            <input type="button" value="Regist" id="btn-reg">
+            
+        </div>
+    </form>
+
+    <script src="../static/js/urls.js"></script>
+    <script type="text/javascript">
+        $("#btn-reg").click(function() {
+            // alert("准备注册！");
+            $.ajax({
+                "url":ctx+"/user/reg",
+                "data":$("#form-reg").serialize(),
+                "type":"post",
+                "dataType":"json",
+                "success":function (json) {
+                    if (json.state == 2002) {
+                        alert("注册失败："+json.message);
+                    } else {
+                        alert("注册成功：");
+                        location.href="login.html";
+                    }
+                }
+            });
+        });
+    </script>  
+</body>
+</html>

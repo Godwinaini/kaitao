@@ -1,0 +1,22 @@
+﻿<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title>对不起，您要访问的页面不存在！ 开淘网</title> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- <base href="http://www.kaitao.cn/" /> --> <link rel="stylesheet" type="text/css" href="/public/css/amazeui.css"> <link rel="stylesheet" type="text/css" href="/public/css/main.css"> </head> <body> <div class="am-g am-g-fixed blog-g-fixed" style="text-align:center"> <img src="/public/images/404error.jpg" /> <br><button type="button" class="am-btn am-btn-secondary" id="gobtn">返回开淘网首页</button> <br><br><span id="timer">3</span>秒后自动进入开淘网首页...
+</div> <script src="/public/js/jquery.min.js"></script> <script src="/public/js/amazeui.min.js"></script> <script type="text/javascript">
+$(function(){
+	$('#gobtn').click(function(){
+		location.href='http://www.kaitao.cn/';
+	});
+	
+	var timeNum = 3;
+	//秒速变化
+	setInterval(function(){
+		timeNum = timeNum -1
+		$('#timer').text(timeNum);
+	},1000);
+	
+	//3秒后转向首页
+ 	setTimeout(function(){
+		window.location = 'http://www.kaitao.cn/';
+	},3000);
+});
+</script> <style>
+footer{position: fixed;bottom: 0;}
+</style> </body> </html>
